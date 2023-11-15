@@ -9,7 +9,7 @@ import com.example.proyecto_notas.MODELOS.NotaEntity
 @Database(entities = [NotaEntity::class], version = 1, exportSchema = false)
 abstract class BDNOTAS : RoomDatabase() {
 
-    abstract fun DAO(): NotaEntity
+    abstract fun DAO(): DAO
 
     companion object {
         @Volatile

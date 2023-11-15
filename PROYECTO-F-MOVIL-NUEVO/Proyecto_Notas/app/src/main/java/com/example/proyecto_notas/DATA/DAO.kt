@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.example.proyecto_notas.MODELOS.NotaEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface DAO {
@@ -21,5 +22,5 @@ interface DAO {
     suspend fun delete(item: NotaEntity)
 
     @Query("SELECT * from NotaEntity ORDER BY Titulo ASC")
-    fun getItems(): List<NotaEntity>
+    fun getItems(): Flow<List<NotaEntity>>
 }
