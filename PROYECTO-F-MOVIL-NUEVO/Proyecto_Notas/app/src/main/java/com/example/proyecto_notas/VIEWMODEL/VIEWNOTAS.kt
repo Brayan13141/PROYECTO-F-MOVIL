@@ -23,12 +23,14 @@ class VIEWNOTAS(private val REP : REPO) : ViewModel() {
     }
     suspend fun saveNOTA() {
         if (validateInput()) {
-            //INSERT
+            REP.insert(UiState.NOTADetails.toNota())
         }
     }
 
-}
 
+
+}
+//CLASES JUNTAS DE EL ESTADO Y LOS DETALLES
 data class NotaUiState(
     val NOTADetails: NOTADetails = NOTADetails(),
     val isEntryValid: Boolean = false
@@ -40,5 +42,8 @@ data class NOTADetails(
     val DESCRPICION: String = "",
    //  val quantity: String = "",
 )
-fun NOTADetails.toItem(): NotaEntity = NotaEntity(
+//FUNCION PARA CONVERTIR UN OBJETO EN NOTA
+fun NOTADetails.toNota(): NotaEntity = NotaEntity(
     0,TITULO,DESCRPICION)
+
+//------------------------------------------------------------------------------

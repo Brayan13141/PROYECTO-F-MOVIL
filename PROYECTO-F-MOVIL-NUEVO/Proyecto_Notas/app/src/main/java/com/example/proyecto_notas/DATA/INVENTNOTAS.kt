@@ -2,7 +2,7 @@ package com.example.proyecto_notas.DATA
 
 import android.app.Application
 
-class INVENT : Application() {
+class INVENTNOTAS : Application() {
 
     lateinit var container: AppCont
 
