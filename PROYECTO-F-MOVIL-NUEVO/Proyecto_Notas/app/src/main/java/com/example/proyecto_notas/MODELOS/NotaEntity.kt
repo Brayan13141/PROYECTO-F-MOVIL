@@ -11,6 +11,6 @@ data class NotaEntity (
     @ColumnInfo(name = "Titulo")
     val Titulo: String,
     @ColumnInfo(name = "Descripcion")
-    val Descripcion: Double
+    val Descripcion: String
 
 )

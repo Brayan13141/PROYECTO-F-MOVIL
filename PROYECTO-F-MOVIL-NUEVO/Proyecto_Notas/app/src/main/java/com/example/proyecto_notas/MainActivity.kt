@@ -31,8 +31,9 @@ class MainActivity : ComponentActivity() {
                     modifier = androidx.compose.ui.Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
+
                     AdministradorNavegacion()
-                    NotasApp.Content(windowSize.widthSizeClass, navController = rememberNavController())
+                    //NotasApp.Content(windowSize.widthSizeClass, navController = rememberNavController())
                 }
             }
         }

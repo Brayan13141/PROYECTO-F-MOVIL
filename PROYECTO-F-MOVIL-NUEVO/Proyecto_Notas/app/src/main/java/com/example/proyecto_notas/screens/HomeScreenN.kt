@@ -28,6 +28,8 @@ import com.example.proyecto_notas.componentes.BotonD
 import com.example.proyecto_notas.componentes.NotaItem
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.ViewModel
+import com.example.proyecto_notas.VIEWMODEL.VIEWNOTAS
 
 val notas : List<Nota> = listOf(
     Nota("NOTA1","DESCRIPCION1"),
@@ -40,7 +42,10 @@ val notas : List<Nota> = listOf(
 )
 
 @Composable
-fun NotasScreenN(navController: NavController ,list: List<Nota> = notas) {
+fun NotasScreenN(navController: NavController ,
+                 list: List<Nota> = notas
+                // View : VIEWNOTAS
+) {
 
     Column(
         modifier = Modifier
@@ -86,8 +91,9 @@ fun NotasScreenN(navController: NavController ,list: List<Nota> = notas) {
          }
 
 
-
     }
+
+
 }
 
 
