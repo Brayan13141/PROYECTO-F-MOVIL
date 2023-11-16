@@ -1,3 +1,5 @@
+package com.example.proyecto_notas.screens
+
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
