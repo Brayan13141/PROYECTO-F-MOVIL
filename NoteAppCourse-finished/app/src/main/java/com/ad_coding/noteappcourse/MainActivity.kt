@@ -74,7 +74,6 @@ class MainActivity : ComponentActivity() {
                                 }
                             }
                         }
-
                         NoteScreen(
                             state = state,
                           onEvent = viewModel::onEvent
