@@ -57,11 +57,7 @@ fun NoteListScreen(
             )
         ) {
             item {
-                Row(verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(200.dp)) {
-                    Text(text = "Notes", style = MaterialTheme.typography.titleLarge)
-                    BotonD()
-                }
+            BotonD()
             }
             items(noteList) { note ->
             NotaItem(Nota = note, onNoteClick = onNoteClick )
