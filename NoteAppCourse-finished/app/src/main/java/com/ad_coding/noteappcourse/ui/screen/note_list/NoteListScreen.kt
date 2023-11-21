@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import com.ad_coding.noteappcourse.componentes.BotonD
 import com.ad_coding.noteappcourse.componentes.NotaItem
 import com.ad_coding.noteappcourse.domain.model.Note
+import java.nio.file.WatchEvent
 
 
 @Composable
@@ -63,7 +64,8 @@ fun NoteListScreen(
                 }
             }
             items(noteList) { note ->
-            NotaItem(Nota = note)
+            NotaItem(Nota = note, onNoteClick = onNoteClick )
+
             }
         }
     }

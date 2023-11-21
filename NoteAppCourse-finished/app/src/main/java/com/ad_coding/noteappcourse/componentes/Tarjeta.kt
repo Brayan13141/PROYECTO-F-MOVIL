@@ -1,5 +1,6 @@
 package com.ad_coding.noteappcourse.componentes
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -19,9 +20,13 @@ import com.ad_coding.noteappcourse.domain.model.Note
 
 
 @Composable
-fun NotaItem(Nota : Note){
+fun NotaItem(Nota : Note,
+             onNoteClick: (Note) -> Unit,
+){
     Card(
-        modifier = Modifier.fillMaxWidth().padding(5.dp)
+        modifier = Modifier.fillMaxWidth()
+            .padding(5.dp)
+            .clickable(onClick = { onNoteClick(Nota) })
     ){
         Text(
             text = Nota.title,
